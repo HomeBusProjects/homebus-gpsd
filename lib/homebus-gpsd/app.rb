@@ -18,7 +18,7 @@ class HomebusGpsd::App < Homebus::App
     @device = Homebus::Device.new name: 'Homebus gpsd stats',
                                   model: 'gpsd',
                                   manufacturer: '',
-                                  serial_number: ''
+                                  serial_number: "tcp://#{@host}:#{port}"
 
     _start_gps
   end
