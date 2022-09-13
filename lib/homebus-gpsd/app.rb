@@ -65,16 +65,16 @@ class HomebusGpsd::App < Homebus::App
     reported_time = Time.parse(data[:tpv][0][:time]).to_f*1000
     diff_time = (Time.now.to_f*1000 - reported_time)/1000
     
-    payload = {
+    return {
       number_of_satellites: data[:sky][0][:satellites].select { |x| x[:used] }.length,
       diff_time: diff_time
     }
   end
 
   def work!
-    results = _query_gps
+    payload = _query_gps
 
-    return unless results
+    return unless payload
 
     if options[:verbose]
       puts '>>> payload:'

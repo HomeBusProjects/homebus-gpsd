@@ -5,7 +5,5 @@ require 'homebus-gpsd/app'
 
 options = HomebusGpsd::Options.new
 app = HomebusGpsd::App.new(options.options)
-app.setup!
-app.work!
-#app.run!
+app.run!
 
