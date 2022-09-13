@@ -9,7 +9,7 @@ GIT
 PATH
   remote: .
   specs:
-    homebus-gpsd (0.0.1)
+    homebus-gpsd (0.0.2)
 
 GEM
   remote: https://rubygems.org/
