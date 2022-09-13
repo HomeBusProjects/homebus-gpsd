@@ -86,7 +86,7 @@ class HomebusGpsd::App < Homebus::App
   end
 
   def update_interval
-    60 * 60
+    60
   end
 
   def name
